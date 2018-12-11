@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>A set of Ooler Module files</string>
+	<key>Summary</key>
+	<string>A set of Ooler Module files including Storyboard, Interactor, Router, and ViewController</string>
+	<key>SortOrder</key>
+	<string>30</string>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>Options</key>
+	<array>
+	  <dict>
+		<key>Identifier</key>
+		<string>productName</string>
+		<key>Required</key>
+		<true/>
+		<key>Name</key>
+		<string>Name:</string>
+		<key>Description</key>
+		<string>The base name of the Ooler Module files</string>
+		<key>Type</key>
+		<string>text</string>
+		<key>Default</key>
+		<string>MyView</string>
+	  </dict>
+	</array>
+</dict>
+</plist>
