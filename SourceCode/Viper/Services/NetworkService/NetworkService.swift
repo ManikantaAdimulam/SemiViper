@@ -81,7 +81,7 @@ class NetworkService {
         
         setAlamofireDefaultConfiguration()
         // Set path
-        var completeURL = serverUrl + apiPath
+        var completeURL = serverUrl+NetworkConfiguration.currentVersion + apiPath
         
         // Add parameters to URL if request is get and clear passing parameters for the get request
         var passingParameters = parameters

@@ -74,8 +74,11 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `MoviesTableViewCell`.
+    static let moviesTableViewCell: Rswift.ReuseIdentifier<MoviesTableViewCell> = Rswift.ReuseIdentifier(identifier: "MoviesTableViewCell")
+    
     fileprivate init() {}
   }
   
@@ -169,7 +172,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct exampleModule: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ExampleModuleViewController
+      typealias InitialController = UIKit.UITabBarController
       
       let bundle = R.hostingBundle
       let exampleModuleStoryboard = StoryboardViewControllerResource<ExampleModuleViewController>(identifier: "ExampleModuleStoryboard")

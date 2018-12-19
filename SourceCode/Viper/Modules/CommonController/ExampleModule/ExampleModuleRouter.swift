@@ -60,7 +60,13 @@ class ExampleModuleRouter {
 
      - returns: ExampleModuleViewController with its required dependencies set
     */
-    func assembleScreen() -> ExampleModuleViewController {
+    ///
+    var networkService: NetworkService
+    
+    init(with NetworkServices: NetworkService) {
+        self.networkService = NetworkServices
+    }
+    func assembleScreen() -> ExampleModuleViewController? {
 
         /**
          Q: What is `R.storyboard.exampleModule()`?
@@ -73,14 +79,24 @@ class ExampleModuleRouter {
          instead of the "stringly-typed"
          `UIStoryboard.init(name: "DebugOutputView", bundle: nil).instantiateInitialViewController as? ExampleModuleViewController`
          */
-        guard let vc = R.storyboard.exampleModule.instantiateInitialViewController() else {
+        guard let vc = R.storyboard.exampleModule.exampleModuleStoryboard() else {
             fatalError("Unable to get ExampleModuleViewController.")
         }
 
-        let interactor = ExampleModuleInteractor()
+        let interactor = ExampleModuleInteractor(networkServices: networkService)
         vc.interactor = interactor
 
         return vc
+    }
+    
+    func assembelTabBarController() -> UITabBarController? {
+        guard let controller = R.storyboard.exampleModule.instantiateInitialViewController() else {  fatalError("Unable to get ExampleModuleViewController.") }
+//        controller.selectedViewController = assembleScreen()
+        guard let exampleVC = assembleScreen(), let anotherVC = controller.viewControllers?.last else { return nil }
+        controller.setViewControllers([exampleVC, anotherVC], animated: false)
+//        controller.viewControllers = [assembleScreen(), controller.viewControllers!.last] as? [UIViewController]
+        controller.selectedIndex = 0
+        return controller
     }
     
     /**
@@ -106,7 +122,7 @@ class ExampleModuleRouter {
                 fatalError("Unable to get ExampleModuleViewController.")
         }
 
-        let interactor = ExampleModuleInteractor()
+        let interactor = ExampleModuleInteractor(networkServices: networkService)
         vc.interactor = interactor
 
         return nav
@@ -128,11 +144,11 @@ class ExampleModuleRouter {
 
         // we'll assume there is no nav for this use case. If there is, the next line
         // of code would look like the code in `assembleScreenWithNav` above.
-        guard let vc = R.storyboard.exampleModule.instantiateInitialViewController() else {
+        guard let vc = R.storyboard.exampleModule.exampleModuleStoryboard() else {
             fatalError("Unable to get ExampleModuleViewController.")
         }
 
-        let interactor = ExampleModuleInteractor()
+        let interactor = ExampleModuleInteractor(networkServices: networkService)
         vc.interactor = interactor
 
         window.rootViewController = vc

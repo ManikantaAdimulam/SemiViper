@@ -70,5 +70,9 @@ class LoginInteractor: Interacting {
     func navigateToForgotPassword() {
          router.navigateToForgotPassword()
     }
+    ///
+    func navigateToExampleModule() {
+        router.navigateToExampleModule()
+    }
     
 }

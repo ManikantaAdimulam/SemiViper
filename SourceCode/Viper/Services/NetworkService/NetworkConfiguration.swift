@@ -14,13 +14,13 @@ class NetworkConfiguration: NSObject {
     /// Time Interval in second for resource time out
     static let timeoutIntervalForResource = 30.0
     ///
-    static let currentVersion = "v1"
+    static let currentVersion = "v2"
     ///
-    static var baseURL: String = "http://202.131.112.86:9093/"
+    static var baseURL: String = "https://yts.am/api/"
     ///
     static func configureNetwork(buildEnvironment: BuildEnvironment) {
         switch buildEnvironment {
-        case .local: baseURL = "http://192.168.1.57:3002/"
+        case .local: baseURL = "https://yts.am/api/"
         case .live: baseURL = ""
         case .development: baseURL = ""
         }

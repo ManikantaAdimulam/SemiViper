@@ -16,7 +16,7 @@ enum BuildEnvironment: String {
 ///
 class APIList: NSObject {
 
-    ///
+//    /
 //    struct ServerUrl {
 //        ///
 //        static var localURL: String {
@@ -49,5 +49,8 @@ class APIList: NSObject {
     struct ServiceConfirm {
         ///
         static var saveOptinService = "api/save-optin-service"
+    }
+    struct MoviesList {
+        static var moviesList = "/list_movies.json"
     }
 }

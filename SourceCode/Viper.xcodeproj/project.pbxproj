@@ -52,6 +52,13 @@
 		35E965412186EB5B007EDB9E /* UserManagementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E965382186EB5B007EDB9E /* UserManagementRouter.swift */; };
 		35E965422186EB5B007EDB9E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E9653A2186EB5B007EDB9E /* LoginInteractor.swift */; };
 		35E965432186EB5B007EDB9E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E9653B2186EB5B007EDB9E /* LoginViewController.swift */; };
+		4710C97621C268770003AFAB /* MenubarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4710C97521C268770003AFAB /* MenubarVC.swift */; };
+		4710C97821C298000003AFAB /* MenuBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4710C97721C298000003AFAB /* MenuBarItem.swift */; };
+		4710C97A21C2984F0003AFAB /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4710C97921C2984F0003AFAB /* MenuBar.swift */; };
+		4710C97C21C298A00003AFAB /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4710C97B21C298A00003AFAB /* MenuItemView.swift */; };
+		47C68EE621C0DF5B00F9F6A8 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C68EE521C0DF5B00F9F6A8 /* MoviesTableViewCell.swift */; };
+		47C68EE821C0DF8300F9F6A8 /* MoviesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C68EE721C0DF8300F9F6A8 /* MoviesTableViewDataSource.swift */; };
+		47C68EEA21C0E36700F9F6A8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C68EE921C0E36700F9F6A8 /* Movie.swift */; };
 		5C20946297BA33D69D225037 /* Pods_Viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354851479803F8D71F0B7845 /* Pods_Viper.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +114,13 @@
 		35E9653B2186EB5B007EDB9E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		418F2ED8CF48116E95CE02B2 /* Pods-Viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Viper/Pods-Viper.debug.xcconfig"; sourceTree = "<group>"; };
 		461E4EA8C96EB336B9658ECE /* Pods-Viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Viper/Pods-Viper.release.xcconfig"; sourceTree = "<group>"; };
+		4710C97521C268770003AFAB /* MenubarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarVC.swift; sourceTree = "<group>"; };
+		4710C97721C298000003AFAB /* MenuBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarItem.swift; sourceTree = "<group>"; };
+		4710C97921C2984F0003AFAB /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		4710C97B21C298A00003AFAB /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		47C68EE521C0DF5B00F9F6A8 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
+		47C68EE721C0DF8300F9F6A8 /* MoviesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewDataSource.swift; sourceTree = "<group>"; };
+		47C68EE921C0E36700F9F6A8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Viper/Modules/CommonController/ExampleModule/Movie.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,10 +185,13 @@
 		1B2BC70920F899B400864F6B /* ExampleModule */ = {
 			isa = PBXGroup;
 			children = (
+				4710C97421C268410003AFAB /* MenuBarTrails */,
 				1B2BC72720F8B0E500864F6B /* ExampleModule.storyboard */,
 				1B2BC72520F8B0E500864F6B /* ExampleModuleInteractor.swift */,
 				1B2BC72820F8B0E500864F6B /* ExampleModuleRouter.swift */,
 				1B2BC72620F8B0E500864F6B /* ExampleModuleViewController.swift */,
+				47C68EE521C0DF5B00F9F6A8 /* MoviesTableViewCell.swift */,
+				47C68EE721C0DF8300F9F6A8 /* MoviesTableViewDataSource.swift */,
 			);
 			path = ExampleModule;
 			sourceTree = "<group>";
@@ -193,6 +210,7 @@
 		1B2BC70B20F899B400864F6B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				47C68EE921C0E36700F9F6A8 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -402,6 +420,17 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4710C97421C268410003AFAB /* MenuBarTrails */ = {
+			isa = PBXGroup;
+			children = (
+				4710C97521C268770003AFAB /* MenubarVC.swift */,
+				4710C97721C298000003AFAB /* MenuBarItem.swift */,
+				4710C97921C2984F0003AFAB /* MenuBar.swift */,
+				4710C97B21C298A00003AFAB /* MenuItemView.swift */,
+			);
+			path = MenuBarTrails;
+			sourceTree = "<group>";
+		};
 		BB60E42D288A7285CAC48C78 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +564,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Viper/Pods-Viper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ADAL/ADAL.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -545,6 +575,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADAL.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -587,9 +618,11 @@
 				35E965422186EB5B007EDB9E /* LoginInteractor.swift in Sources */,
 				359BE591217760AF0091C7F5 /* R.generated.swift in Sources */,
 				352BB907216F7F9D001B44A8 /* CommonContracts.swift in Sources */,
+				47C68EEA21C0E36700F9F6A8 /* Movie.swift in Sources */,
 				3585CB762189B7B7009FD3A3 /* StringExtension.swift in Sources */,
 				35E9653C2186EB5B007EDB9E /* SignUpViewController.swift in Sources */,
 				1B2BC6F320F8969F00864F6B /* AppDelegate.swift in Sources */,
+				47C68EE621C0DF5B00F9F6A8 /* MoviesTableViewCell.swift in Sources */,
 				35E9653E2186EB5B007EDB9E /* ForgetPasswordViewController.swift in Sources */,
 				1B2BC72C20F8B0E500864F6B /* ExampleModuleRouter.swift in Sources */,
 				352BB91F216F8BA2001B44A8 /* UIViewController+HUD.swift in Sources */,
@@ -597,14 +630,19 @@
 				1B2BC72420F8A6DF00864F6B /* Interacting.swift in Sources */,
 				35E6E96C2174D161007E2D99 /* NetworkService.swift in Sources */,
 				35E965412186EB5B007EDB9E /* UserManagementRouter.swift in Sources */,
+				47C68EE821C0DF8300F9F6A8 /* MoviesTableViewDataSource.swift in Sources */,
+				4710C97621C268770003AFAB /* MenubarVC.swift in Sources */,
 				35E6E96D2174D161007E2D99 /* NetworkConfiguration.swift in Sources */,
 				352BB921216F8BE9001B44A8 /* UIViewController+Alert.swift in Sources */,
 				1B2BC72A20F8B0E500864F6B /* ExampleModuleViewController.swift in Sources */,
 				1B2BC72320F8A6DF00864F6B /* BaseViewController.swift in Sources */,
+				4710C97A21C2984F0003AFAB /* MenuBar.swift in Sources */,
 				35032C34219EC8880064BAD2 /* HapticFeedback.swift in Sources */,
 				35E965432186EB5B007EDB9E /* LoginViewController.swift in Sources */,
 				3556AF4B2175CBF200148C39 /* StorageService.swift in Sources */,
 				3556AF492175C8FA00148C39 /* LocalStorageService.swift in Sources */,
+				4710C97821C298000003AFAB /* MenuBarItem.swift in Sources */,
+				4710C97C21C298A00003AFAB /* MenuItemView.swift in Sources */,
 				1B2BC72920F8B0E500864F6B /* ExampleModuleInteractor.swift in Sources */,
 				352BB914216F8415001B44A8 /* NotificationService.swift in Sources */,
 				352BB929216F8D9D001B44A8 /* CustomAlertVC.swift in Sources */,
